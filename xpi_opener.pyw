@@ -33,9 +33,11 @@ def extract_xpi(filename):
         with zipfile.ZipFile(filename, "r") as zip_ref:
             zip_ref.extractall(f"{filename_entry_var.get()}")
         win.destroy()
+        win1.destroy()
     except:
         win.destroy()
         messagebox.showinfo("XPI Extract", "An Error occured!")
+        win1.destroy()
 
 current_user = getpass.getuser()
 icon_path = f"C:\\Users\\{current_user}\\VisualElements_70.ico"
