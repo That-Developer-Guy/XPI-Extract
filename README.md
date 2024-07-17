@@ -14,4 +14,5 @@ Just download the Installer file from the releases and execute it. Make sure to 
 
 If you want to build this from the source code (I do not recommend it), you have two options:
 
-1. Edit the install_script.iss file to match the paths of the files and make an executable with pyinstaller. You also have to download <a href="https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list">Inno Download Plugin</a>.
+1. Edit the `install_script.iss` file to match the paths of the files and make an executable with pyinstaller. You also have to download <a href="https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list">Inno Download Plugin</a>.
+2. Do all the commands done in the `requirements.bat` file
