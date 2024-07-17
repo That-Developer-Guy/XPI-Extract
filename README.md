@@ -1,6 +1,6 @@
 # XPI Extract
 
-This is a simple program with which you can extract .xpi files, by doppelclicking on them.
+This is a simple program with which you can extract .xpi files.
 
 # Usage
 
