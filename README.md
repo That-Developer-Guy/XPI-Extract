@@ -14,15 +14,15 @@ To install, download the Installer file from the releases and execute it. Make s
  
 If you wish to build this from the source code (I do not recommend it), you have two options: 
  
-1. Edit the  install_script.iss  file to match the file paths and create an executable from  xpi_opener.pyw  using Nuitka: 
+1. Edit the `install_script.iss` file to match the file paths and create an executable from `xpi_opener.pyw` using Nuitka: 
    -  `python -m pip install nuitka`  
-   -  nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw  
+   -  `nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw`
    - Additionally, download [Inno Download Plugin](https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list) and install it alongside [Inno Setup Compiler](https://jrsoftware.org/isdl.php). 
  
 2. Build it entirely from source by executing the following commands in an admin command prompt (with the cwd set to the directory with the source code): 
-   -  mkdir C:\Users\%USERNAME%\.xpi-extract  
-   -  copy VisualElements_70.ico C:\Users\%USERNAME%\.xpi-extract  
-   -  python -m pip install nuitka  
-   -  nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw  
-   -  assoc .xpi=xpifile  
-   -  ftype xpifile="path/to/xpi_opener.exe" "%%1" %*
+   -  `mkdir C:\Users\%USERNAME%\.xpi-extract`
+   -  `copy VisualElements_70.ico C:\Users\%USERNAME%\.xpi-extract`
+   -  `python -m pip install nuitka` 
+   -  `nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw`
+   - `assoc .xpi=xpifile`
+   -  `ftype xpifile="path/to/xpi_opener.exe" "%%1" %*`
