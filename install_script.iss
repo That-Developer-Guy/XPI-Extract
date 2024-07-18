@@ -26,6 +26,7 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
+DisableDirPage=yes
 OutputBaseFilename=XPI-Extract-1.1-Installer
 Compression=lzma
 SolidCompression=yes
