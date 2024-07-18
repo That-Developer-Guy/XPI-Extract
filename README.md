@@ -19,7 +19,7 @@ If you wish to build this from the source code (I do not recommend it), you have
    -  nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw  
    - Additionally, download [Inno Download Plugin](https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list) and install it alongside [Inno Setup Compiler](https://jrsoftware.org/isdl.php). 
  
-2. Build it entirely from source by executing the following commands in an admin command prompt (with the source code and the directory set to the directory with the source code): 
+2. Build it entirely from source by executing the following commands in an admin command prompt (with the cwd set to the directory with the source code): 
    -  mkdir C:\Users\%USERNAME%\.xpi-extract  
    -  copy VisualElements_70.ico C:\Users\%USERNAME%\.xpi-extract  
    -  python -m pip install nuitka  
