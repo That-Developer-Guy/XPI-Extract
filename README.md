@@ -25,4 +25,4 @@ If you wish to build this from the source code (I do not recommend it), you have
    -  python -m pip install nuitka  
    -  nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw  
    -  assoc .xpi=xpifile  
-   -  ftype xpifile="path/to/xpi_opener.exe" "%%1" %*  
+   -  ftype xpifile="path/to/xpi_opener.exe" "%%1" %*
