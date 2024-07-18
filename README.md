@@ -15,7 +15,7 @@ To install, download the Installer file from the releases and execute it. Make s
 If you wish to build this from the source code (I do not recommend it), you have two options: 
  
 1. Edit the  install_script.iss  file to match the file paths and create an executable from  xpi_opener.pyw  using Nuitka: 
-   -  python -m pip install nuitka  
+   -  `python -m pip install nuitka`  
    -  nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw  
    - Additionally, download [Inno Download Plugin](https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list) and install it alongside [Inno Setup Compiler](https://jrsoftware.org/isdl.php). 
  
