@@ -12,7 +12,7 @@ To install, download the Installer file from the releases and execute it. Make s
  
 ## Building 
  
-If you wish to build this from the source code, you have two options: 
+If you wish to build this from the source code (I do not recommend it), you have two options: 
  
 1. Edit the  install_script.iss  file to match the file paths and create an executable from  xpi_opener.pyw  using Nuitka: 
    -  python -m pip install nuitka  
