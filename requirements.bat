@@ -1,4 +1,7 @@
 @echo off
+if exist "C:\Users\%USERNAME%\.xpi-extract" (
+    del C:\Users\%USERNAME%\.xpi-extract
+)
 if not exist "C:\Users\%USERNAME%\.xpi-extract" (
     mkdir "C:\Users\%USERNAME%\.xpi-extract"
 )
