@@ -10,7 +10,7 @@ To use this program, simply open an .xpi file and click on "Extract" in the wind
  
 To install, download the Installer file from the releases and execute it. Make sure to leave the options at their default settings, as changing them may cause issues. 
  
-## Building 
+## Building
  
 If you wish to build this from the source code (I do not recommend it), you have two options: 
  
@@ -19,7 +19,7 @@ If you wish to build this from the source code (I do not recommend it), you have
    -  `nuitka --onefile --enable-plugin=tk-inter --windows-console-mode=disable --windows-icon-from-ico=VisualElements_70.ico xpi_opener.pyw`
    - Additionally, download [Inno Download Plugin](https://drive.google.com/drive/folders/0Bzw1xBVt0mokSXZrUEFIanV4azA?usp=sharing#list) and install it alongside [Inno Setup Compiler](https://jrsoftware.org/isdl.php). 
  
-2. Build it entirely from source by executing the following commands in an admin command prompt (with the cwd set to the directory with the source code): 
+2. Build it entirely from source by executing the following commands in an admin command prompt (with the cwd set to the directory with the source code). You have to use v1.1 for this, but you can use the icon from v1.2: 
    -  `mkdir C:\Users\%USERNAME%\.xpi-extract`
    -  `copy VisualElements_70.ico C:\Users\%USERNAME%\.xpi-extract`
    -  `python -m pip install nuitka` 
