@@ -7,3 +7,4 @@ if not exist "C:\Users\%USERNAME%\.xpi-extract\VisualElements_70.ico" (
 )
 assoc .xpi=xpifile
 ftype xpifile="C:\Program Files (x86)\XPI Extract\xpi_opener.exe" "%%1" %*
+pause
