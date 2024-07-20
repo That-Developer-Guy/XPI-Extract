@@ -52,6 +52,19 @@ Source: "{tmp}\requirements.bat"; DestDir: "{tmp}"; Flags: external; ExternalSiz
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Code]
+procedure CurStepChanged(CurStep: TSetupStep); 
+var 
+  Params: string; 
+  ResultCode: Integer; 
+begin 
+  if (CurStep = ssPostInstall) then 
+  begin     
+    Params := '-ExecutionPolicy Bypass -File ' + AddQuotes(ExpandConstant('{tmp}\start_requirements.ps1')); 
+    if not Exec('powershell.exe', Params, '', SW_HIDE, ewWaitUntilTerminated, ResultCode) then 
+      MsgBox('Ausf�hrung des PowerShell-Skripts fehlgeschlagen. Exit-Code: ' + IntToStr(ResultCode), 
+             mbInformation, MB_OK); 
+  end; 
+end; 
 procedure InitializeWizard();
 begin
   idpAddFileSize('{#MyExeDownloadURL}', ExpandConstant('{tmp}\xpi_opener.exe'), 1048576);
@@ -67,8 +80,4 @@ Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
-Filename: "powershell.exe"; \
-    Parameters: "-ExecutionPolicy Bypass -File ""{tmp}\start_requirements.ps1"""; \
-    Verb: runas; \
-    Flags: postinstall skipifsilent runascurrentuser shellexec waituntilterminated runhidden
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
