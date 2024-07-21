@@ -12,6 +12,7 @@ def start_gui(file_path=None):
     win = tk.Toplevel(win1)
     win.transient(win1)
     win.title("XPI Extract")
+    win.focus_force()
 
     style = ttk.Style()
     style.configure('TLabel', font=('Arial', 12), padding=10)
