@@ -3,7 +3,6 @@ from tkinter import ttk, filedialog, messagebox
 import zipfile
 import sys
 import ctypes
-import getpass
 
 ctypes.windll.shcore.SetProcessDpiAwareness(True)
 
@@ -45,8 +44,7 @@ def start_gui(file_path=None):
             messagebox.showinfo("XPI Extract", f"Ein Fehler ist aufgetreten: {str(e)}")
             win1.destroy()
 
-    current_user = getpass.getuser()
-    icon_path = f"C:\\Users\\{current_user}\\.xpi-extract\\VisualElements_70.ico"
+    icon_path = r"C:\Program Files (x86)\XPI Extract\VisualElements_70.ico"
     win.iconbitmap(icon_path)
     win.resizable(False, False)  # Fenstergröße nicht änderbar machen
 
@@ -62,10 +60,9 @@ try:
             start_gui(file_path)
     else:
         if not file_path:
-            current_user = getpass.getuser()
             win1 = tk.Tk()
             win1.withdraw()
-            icon_path = f"C:\\Users\\{current_user}\\.xpi-extract\\VisualElements_70.ico"
+            icon_path = r"C:\Program Files (x86)\XPI Extract\VisualElements_70.ico"
             win1.iconbitmap(icon_path)
             file_path = filedialog.askopenfilename(filetypes=[("XPI files", "*.xpi")])
             print(file_path.encode())
